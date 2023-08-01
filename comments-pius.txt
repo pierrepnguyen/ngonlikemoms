@@ -1,0 +1,6 @@
+Comments from Pius as of 8/1/23
+===============================
+
+1.  Is this the most updated org/repo?  Not sure if changed after new team of Pierre/Habib.  And same questions for project board -- will you divide or claim tasks/issues from the associated project board?
+
+2.  Project lacking package.json;  is the structure a Node/Express API server with a React front end?  How will you create the React client -- Parcel, CRA, Vite, etc?  Need more progress here before being able to deploy
