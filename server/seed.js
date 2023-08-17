@@ -1,15 +1,16 @@
 const { recipesSeed } = require('./seedData');
 
-const { db } = require('./db/db');
-const { Recipe } = require('./models/Recipe');
+const {sequelize} = require('./db');
+const {Recipe} = require('./models');
 
 const seed = async () => {
 
     try {
         // drop and recreate tables per model definitions
-        await db.sync({ force: true });
+        await sequelize.sync({ force: true });
     
         // insert data
+        // await Promise.all(recipes.map(recipe => Recipe.create(recipe)));
         await Recipe.bulkCreate(recipesSeed);
 
         console.log("db populated!");

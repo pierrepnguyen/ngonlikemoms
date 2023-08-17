@@ -26,7 +26,7 @@ const recipesSeed =
     {
         "name": "Big Night Pizza",
         "ingredients": 
-           "yeast, flour, vegetable oil, sugar, salt, hot water, pizza sauce, mozzarella cheese",
+          "yeast, flour, vegetable oil, sugar, salt, hot water, pizza sauce, mozzarella cheese",
         "steps": [
             "Add hot water to yeast in a large bowl and let sit for 15 minutes. Mix in oil, sugar, salt, and flour and let sit for 1 hour. Knead the dough and spread onto a pan. Spread pizza sauce and sprinkle cheese. Add any optional toppings as you wish. Bake at 400 deg Fahrenheit for 15 minutes. Enjoy!"
         ],

@@ -1,17 +1,16 @@
+// load environment variables from .env or elsewhere
 require('dotenv').config();
 const express = require('express');
 const app = express();
 const morgan = require('morgan');
 const path = require('path');
 const cors = require('cors');
-const bodyParser = require('body-parser');
 
 //Allow CORS requests
 app.use(cors());
 // logging middleware
 app.use(morgan('dev'));
 // parsing middleware for form input data & json
-app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
@@ -19,7 +18,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '../dist')));
 
 // api router
-app.use('/recipe', require('./Routes/routes'));
+app.use('/api', require('./routes'));
 
 // 404 handler
 app.use((req, res) => {
@@ -33,4 +32,6 @@ app.use((error, req, res, next) => {
   res.send({error: error.message, name: error.name, message: error.message, table: error.table});
 });
 
-module.exports = { app };
+module.exports = app;
+
+

@@ -1,5 +1,5 @@
-const { Recipe } = require("./Recipe");
+const { Recipe } = require('./Recipe')
+const { Sequelize } = require('sequelize')
+const { sequelize } = require('../db')
 
-module.exports = {
-    Recipe
-};
+module.exports = { db: sequelize, Recipe }
