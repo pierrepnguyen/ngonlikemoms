@@ -1,14 +1,32 @@
 {
-  "name": "ngonlikemoms",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "recipeapp",
+  "version": "1.2.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "react-scripts start",
-    "seed": "node seed.js"
+    "test": "jest && node server/seed.js",
+    "client-dev": "parcel client/index.html --open",
+    "server-dev": "nodemon server.js",
+    "seed": "node server/seed.js",
+    "start": "parcel build client/index.html && nodemon server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-react": "^7.14.5",
+    "cors": "^2.8.5",
+    "dotenv": "16.0.0",
+    "express": "^4.17.1",
+    "morgan": "1.10.0",
+    "nodemon": "^2.0.19",
+    "parcel-bundler": "^1.12.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-test-renderer": "^18.2.0",
+    "regenerator-runtime": "^0.13.11",
+    "sequelize": "^6.23.2",
+    "sqlite3": "^5.1.1"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^13.4.0",
+    "babel-jest": "^27.1.0",
+    "jest": "^27.1.0"
+  }
 }
