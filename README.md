@@ -31,7 +31,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/pierrepnguyen/ngonlikemoms">
-    <img src="/client/img/logo.png" alt="Logo" width="80" height="80">
+    <img src="/client/img/logo.png" alt="Logo" width="80" style="width:250px">
   </a>
 
 <h3 align="center">Ngonlikemoms</h3>
