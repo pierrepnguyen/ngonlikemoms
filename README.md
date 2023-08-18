@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/afaa7a94-29fe-48dd-bc67-6d8d21cbb298/deploy-status)](https://app.netlify.com/sites/stirring-dolphin-bd86ae/deploys)
+<!-- [![Netlify Status](https://api.netlify.com/api/v1/badges/afaa7a94-29fe-48dd-bc67-6d8d21cbb298/deploy-status)](https://app.netlify.com/sites/stirring-dolphin-bd86ae/deploys) -->
 
 <!-- PROJECT LOGO -->
 <br />
