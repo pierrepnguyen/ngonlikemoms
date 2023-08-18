@@ -59,7 +59,7 @@
 ## About The Project
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
-A recipe web app where you can create, read, update, & delete new recipes. This is the deployment module project for Multiverse. This project is deployed using [Netlify](https://docs.netlify.com/). Any information and documentation will be on their website.
+A recipe web app where you can create, read, update, & delete new recipes. This is the deployment module project for Multiverse. This project is deployed using [Render](https://render.com/). Any information and documentation will be on their website.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
