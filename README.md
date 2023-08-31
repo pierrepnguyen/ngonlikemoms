@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/afaa7a94-29fe-48dd-bc67-6d8d21cbb298/deploy-status)](https://app.netlify.com/sites/stirring-dolphin-bd86ae/deploys)
+<!-- [![Netlify Status](https://api.netlify.com/api/v1/badges/afaa7a94-29fe-48dd-bc67-6d8d21cbb298/deploy-status)](https://app.netlify.com/sites/stirring-dolphin-bd86ae/deploys) -->
 
 <!-- PROJECT LOGO -->
 <br />
@@ -59,7 +59,7 @@
 ## About The Project
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
-A recipe web app where you can create, read, update, & delete new recipes. This is the deployment module project for Multiverse. This project is deployed using [Netlify](https://docs.netlify.com/). Any information and documentation will be on their website.
+A recipe web app where you can create, read, update, & delete new recipes. This is the deployment module project for Multiverse. This project is deployed using [Render](https://render.com/). Any information and documentation will be on their website.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
