@@ -58,7 +58,7 @@ export const AddRecipe = ({
                         <br></br>
                         <label for="image">Image:</label>
                         <br></br>
-                        <input type='text' name='image' value = {newRecipe.imageURL}
+                        <input type='text' name='imageURL' value = {newRecipe.imageURL}
                             onChange={handleChange} className='input-form' />
                         <br></br><br></br>
                         <div className="buttons-div">

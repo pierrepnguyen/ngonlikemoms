@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { RecipeList } from "./RecipeList"
 import { AddRecipe } from "./AddRecipe"
+import { Nav } from "./Nav"
+import { HeroSection } from "./Hero";
+import { Footer } from "./Footer";
 
 // import and prepend the api url to any fetch calls
 import apiURL from "../api";
@@ -28,39 +31,53 @@ export const App = () => {
     fetchRecipes();
   }, []);
 
-  const handleAddRecipeButton = () => {
-    setSelectedPage("Add Recipe")
-  }
-
   if(selectedPage === "Main View") {
     return (<main>
-        <h1 className="align-header">Ngonlikemoms</h1>
-        <h2 className="align-header">All Recipes</h2>
-        <div className="button-location">
-          <button onClick={handleAddRecipeButton} className='button-59'>Add Recipe</button>
-        </div>
-        <br></br><hr></hr>
-        <div className="form-page-style">
-          {recipes.map((recipe, idx) => <RecipeList
-            recipe={recipe}
-            key={idx}
+        <Nav 
+            selectedPage={selectedPage} 
             setSelectedPage={setSelectedPage}
-            setCurrentRecipe={setCurrentRecipe}
-            />)}
+        />
+        <div className="container main">
+          <HeroSection />
         </div>
+        <Footer />
     </main>
   )}
+  else if (selectedPage === "Recipe List") {
+    return(
+      <main>
+      <Nav 
+          selectedPage={selectedPage} 
+          setSelectedPage={setSelectedPage}
+      />
+        <div className="main">
+          <div className="form-page-style">
+            {recipes.map((recipe, idx) => <RecipeList
+              recipe={recipe}
+              key={idx}
+              setSelectedPage={setSelectedPage}
+              setCurrentRecipe={setCurrentRecipe}
+              />)}
+          </div>
+        </div>
+      <Footer />
+    </main>
+    )
+  }
   else if (selectedPage === "Add Recipe") {
     return (<main>
-      <h1 className="align-header">Ngonlikemoms</h1>
-      <h2 className="align-header">Add Recipe</h2>
-      <hr></hr>
-      <AddRecipe
-        newRecipe={newRecipe}
-        setNewRecipe={setNewRecipe}
-        selectedPage={selectedPage}
+      <Nav 
+        selectedPage={selectedPage} 
         setSelectedPage={setSelectedPage}
       />
+      <div class="add-recipe main" >
+        <AddRecipe
+          newRecipe={newRecipe}
+          setNewRecipe={setNewRecipe}
+          selectedPage={selectedPage}
+          setSelectedPage={setSelectedPage}
+        />
+      </div>
     </main>
   )}
 
