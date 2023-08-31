@@ -22,23 +22,29 @@ export const Recipe = ({
     fetchDelete(e.target.value)
   }
 
-  const handleBackButton = async () => {
-    setSelectedPage("Main View");
+  const handleBackButton = () => {
+    setSelectedPage("Recipe List");
   };
 
 
   return (
-      <>
-          <h3 className="single-item-header">{currentRecipe.name}</h3>
-          <div className="item-content">
-            <img src={currentRecipe.imageURL} alt={currentRecipe.name} className="image" />
+      <div className="recipe-cont">
+        <div className="row">
+          <h1 className="single-item-header">{currentRecipe.name}</h1>
+        </div>
+        <div className="info-grid">
+          <div className="item-content col1">
             <p className="single-item"><span className="bold">Ingredients: </span>{currentRecipe.ingredients}</p>
             <p className="single-item"><span className="bold">Steps: </span>{currentRecipe.steps}</p>
           </div>
-          <div className="buttons-div">
-            <button onClick={handleDelete} value={currentRecipeID} className='button-59'>Delete</button>
-            <button onClick={handleBackButton} className='button-59'>Back</button>
+          <div className="col2">
+            <img src={currentRecipe.imageURL} alt={currentRecipe.name} className="image" />
           </div>
-      </>
+        </div>
+        <div className="buttons-div">
+          <button onClick={handleDelete} value={currentRecipeID} className='button-59'>Delete</button>
+          <button onClick={handleBackButton} className='button-59'>Back</button>
+        </div>
+      </div>
   );
 };

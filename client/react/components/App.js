@@ -38,7 +38,10 @@ export const App = () => {
             setSelectedPage={setSelectedPage}
         />
         <div className="container main">
-          <HeroSection />
+          <HeroSection  
+            selectedPage={selectedPage}
+            setSelectedPage={setSelectedPage} 
+          />
         </div>
         <Footer />
     </main>
@@ -50,15 +53,13 @@ export const App = () => {
           selectedPage={selectedPage} 
           setSelectedPage={setSelectedPage}
       />
-        <div className="main">
-          <div className="form-page-style">
-            {recipes.map((recipe, idx) => <RecipeList
-              recipe={recipe}
-              key={idx}
-              setSelectedPage={setSelectedPage}
-              setCurrentRecipe={setCurrentRecipe}
-              />)}
-          </div>
+        <div className="grid-list main">
+          {recipes.map((recipe, idx) => <RecipeList
+            recipe={recipe}
+            key={idx}
+            setSelectedPage={setSelectedPage}
+            setCurrentRecipe={setCurrentRecipe}
+          />)}
         </div>
       <Footer />
     </main>
@@ -70,7 +71,7 @@ export const App = () => {
         selectedPage={selectedPage} 
         setSelectedPage={setSelectedPage}
       />
-      <div class="add-recipe main" >
+      <div className="add-recipe main" >
         <AddRecipe
           newRecipe={newRecipe}
           setNewRecipe={setNewRecipe}
@@ -78,19 +79,22 @@ export const App = () => {
           setSelectedPage={setSelectedPage}
         />
       </div>
+      <Footer />
     </main>
   )}
 
   else if (selectedPage === "Single Recipe") {
     return(<main>
-        <h1 className="align-header">Ngonlikemoms</h1>
-        <h2 className="align-header">View</h2>
-        <hr></hr>
+      <Nav 
+        selectedPage={selectedPage} 
+        setSelectedPage={setSelectedPage}
+      />
       <Recipe
         setSelectedPage={setSelectedPage}
         currentRecipe={currentRecipe}
         fetchRecipes={fetchRecipes}
       />
+      <Footer />
     </main>
   )}
 };

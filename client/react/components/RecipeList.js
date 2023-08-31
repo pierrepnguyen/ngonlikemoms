@@ -13,7 +13,9 @@ export const RecipeList = ({
 
   return (
     <>
-      <p onClick={handleClick} className='item-list'>{recipe.name}</p>
+      <div className="recipe">
+        <p onClick={handleClick} className='item-list'>{recipe.name}</p>
+      </div>
     </>
   );
 };

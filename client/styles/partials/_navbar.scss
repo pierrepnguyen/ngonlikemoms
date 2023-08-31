@@ -12,10 +12,10 @@
   .logo{
     font-size: 1.5em;
     font-weight: bolder;
-    color: var(--primary-color);
+    color: var(--text-color);
     text-shadow: 0 1px 3px var(--shadow-color);
     span{
-      color: var(--text-color);
+      color: var(--text-color2);
     }
   }
   .nav-links{
@@ -31,7 +31,7 @@
       display: inline-block;
       height: 2px;
       width: 100%;
-      background-color: var(--primary-color);
+      background-color: var(--text-color2);
       position: absolute;
       bottom: -5px;
       left: 0;
@@ -44,7 +44,7 @@
         }
     }
     &:active{
-      color: var(--primary-color);
+      color: var(--text-color2);
       font-weight: bold;
     }
     }
@@ -121,10 +121,10 @@
       }
     }
     &.active{
-      border-left-color: var(--primary-color);
+      border-left-color: var(--text-color2);
     }
     &:hover{
-      border-left-color: var(--primary-color);
+      border-left-color: var(--text-color2);
       background-color: rgba(0,0,0,0.05);
     }
   }
