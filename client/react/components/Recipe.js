@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import apiURL from "../api";
 
 export const Recipe = ({
@@ -15,17 +16,11 @@ export const Recipe = ({
     })
     const data = await res.json()
     fetchRecipes()
-    setSelectedPage("Main View")
   }
 
   const handleDelete = (e) => {
     fetchDelete(e.target.value)
   }
-
-  const handleBackButton = () => {
-    setSelectedPage("Recipe List");
-  };
-
 
   return (
       <div className="recipe-cont">
@@ -42,8 +37,8 @@ export const Recipe = ({
           </div>
         </div>
         <div className="buttons-div">
-          <button onClick={handleDelete} value={currentRecipeID} className='button-59'>Delete</button>
-          <button onClick={handleBackButton} className='button-59'>Back</button>
+          <Link onClick={handleDelete} to={'/'} value={currentRecipeID} className='button-59'>Delete</Link>
+          <Link to={'/recipes'} className='button-59'>Back</Link>
         </div>
       </div>
   );

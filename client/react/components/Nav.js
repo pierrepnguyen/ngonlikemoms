@@ -1,38 +1,28 @@
 import React, {useState} from "react";
-import {Sidebar} from './Sidebar'
+import { Link, useLocation } from 'react-router-dom';
+
+import { Sidebar } from './Sidebar'
 
 export const Nav = ({
-  setSelectedPage
 }) => {
   const [showSidebar, setShowSidebar] = useState(false);
-  const handleHome = () => {
-    setSelectedPage("Main View")
-  }
-  const handleAll = () => {
-    setSelectedPage("Recipe List")
-  }
-  const handleAdd = () => {
-    setSelectedPage("Add Recipe")
-  }
+  const location = useLocation()
   
   const links = [
     {
       name: 'Home',
       path: '/',
-      icon: 'ri-home-5-line',
-      page: 'Main View'
+      icon: 'ri-home-5-line'
     },
     {
       name: 'Recipes',
-      path:'/recipes',
-      icon: 'ri-list-check',
-      page: 'Recipe List'
+      path:'/food/recipes',
+      icon: 'ri-list-check'
     },
     {
       name: 'Add Recipe',
       path:"/add-recipe",
-      icon: 'ri-add-box-line',
-      page: 'Add Recipe'
+      icon: 'ri-add-box-line'
     }
   ]
 
@@ -46,9 +36,9 @@ export const Nav = ({
       <div className="navbar">
         <a href='#!' className="logo"><span>ngon</span>likemoms</a>
         <div className="nav-links">
-          <a onClick={handleHome}>Home</a>
-          <a onClick={handleAll}>Recipes</a>
-          <a onClick={handleAdd}>Add Recipe</a>
+          { links.map(link => (
+            <Link to={link.path} key={link.name} className={location.pathname == link.path ? "active" : "" } >{link.name}</Link>
+          ))}
         </div>
         <div onClick={()=> setShowSidebar(!showSidebar)} className={showSidebar ? "sidebar-btn active" : "sidebar-btn"}>
           <div className="bar"></div>

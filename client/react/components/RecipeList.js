@@ -1,20 +1,22 @@
 import React from "react";
 
+import { RecipeCard } from "./RecipeCard";
+
 export const RecipeList = ({
-  recipe,
+  recipes,
   setSelectedPage,
   setCurrentRecipe,
+  currentRecipe
 }) => {
-
-  const handleClick = () => {
-    setSelectedPage("Single Recipe")
-    setCurrentRecipe(recipe)
-  }
 
   return (
     <>
-      <div className="recipe">
-        <p onClick={handleClick} className='item-list'>{recipe.name}</p>
+      <div className="recipe-container">
+        {recipes.map((recipe, idx) => {<RecipeCard
+          currentRecipe={currentRecipe}
+          recipe={recipe}
+          key={idx} 
+        />})}
       </div>
     </>
   );

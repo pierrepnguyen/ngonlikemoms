@@ -30,11 +30,45 @@ a{
   text-decoration: none;
 }
 
-.recipe{
+.recipe-container{
   padding-inline: 11vw;
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  align-items: center;
+  gap: 1.75vw;
+  .recipe-img{
+    background-color: red;
+    // height: 0;
+    // width: 100%;
+  }
 }
 
+.recipe-card{
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px var(--shadow-color);
+  .recipe-title{
+    font-weight: bold;
+    color: var(--text-color);
+    margin-top: .25em;
+    margin-bottom: .5em;
+  }
+  .recipe-card-info{
+    padding: 1em;
+  }
+  .view-btn{
+    font-weight: bold;
+    color: var(--text-color2);
+    display: inline-block;
+  }
+}
 
+.recipe-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1.5em;
+  margin-top: 3vh;
+}
 
 .add-recipe{
   height: 85vh;
